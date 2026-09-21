@@ -1,6 +1,6 @@
 import requests
 
-API_KEY = "875e82edf31411c4c2f99ea5d8c73577"
+API_KEY = "//Your API KEY//"
 
 def get_data(place, forecast_days = None):
     url = f"https://api.openweathermap.org/data/2.5/forecast?q={place}&appid={API_KEY}"
@@ -11,6 +11,7 @@ def get_data(place, forecast_days = None):
     filtered_data = filtered_data[:nr_values]
 
     return filtered_data
+
 
 if __name__ == "__main__":
     print(get_data(place = "Tokyo"))
